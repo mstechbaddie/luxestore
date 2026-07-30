@@ -1,5 +1,5 @@
 import { getProducts } from "../services/api";
-import ProductCard from "./ProductCard";
+import ProductGrid from "./ProductGrid";
 
 export default async function FeaturedProducts() {
   const products = await getProducts();
@@ -15,14 +15,7 @@ export default async function FeaturedProducts() {
           Discover our latest arrivals.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.slice(0, 8).map((product) => (
-            <ProductCard
-              key={product.id}
-              product={product}
-            />
-          ))}
-        </div>
+        <ProductGrid products={products.slice(0, 8)} />
       </div>
     </section>
   );

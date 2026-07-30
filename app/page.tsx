@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Categories from "./components/Categories";
 import FeaturedProducts from "./components/FeaturedProducts";
+import Cart from "./components/Cart";
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Categories />
-       <FeaturedProducts />
+      <FeaturedProducts />
+      <Cart />
     </main>
   );
 }

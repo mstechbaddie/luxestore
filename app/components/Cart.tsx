@@ -3,19 +3,28 @@
 import { useContext } from "react";
 import Image from "next/image";
 import { CartContext } from "../context/CartContext";
-
+import { UIContext } from "../context/UIContext";
 export default function Cart() {
   const cartContext = useContext(CartContext);
 
   if (!cartContext) return null;
 
-  const { cart } = cartContext;
+  const {
+  cart,
+  removeFromCart,
+  increaseQuantity,
+  decreaseQuantity,
+} = cartContext;
+const uiContext = useContext(UIContext);
 
+if (!uiContext) return null;
+
+const { cartOpen, closeCart } = uiContext;
   const total = cart.reduce(
     (sum, item) => sum + item.price * item.quantity,
     0
   );
-
+if (!cartOpen) return null;
   return (
     <div className="fixed top-0 right-0 h-screen w-96 bg-white shadow-2xl p-6 overflow-y-auto">
       <h2 className="text-2xl font-bold mb-6">
@@ -52,9 +61,36 @@ export default function Cart() {
                     ${item.price.toFixed(2)}
                   </p>
 
-                  <p className="text-sm mt-1">
-                    Quantity: {item.quantity}
-                  </p>
+                  <div className="flex items-center justify-between mt-3">
+  <div className="flex items-center gap-3">
+
+    <button
+      onClick={() => decreaseQuantity(item.id)}
+      className="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 font-bold"
+    >
+      -
+    </button>
+
+    <span className="font-semibold">
+      {item.quantity}
+    </span>
+
+    <button
+      onClick={() => increaseQuantity(item.id)}
+      className="w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300 font-bold"
+    >
+      +
+    </button>
+
+  </div>
+
+  <button
+    onClick={() => removeFromCart(item.id)}
+    className="text-red-600 hover:text-red-800 text-sm font-semibold"
+  >
+    Remove
+  </button>
+</div>
                 </div>
               </div>
             ))}
