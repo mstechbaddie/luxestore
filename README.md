@@ -1,10 +1,10 @@
 # 🛍️ LuxeStore
 
-A modern and responsive e-commerce web application built with **Next.js**, **TypeScript**, and **Tailwind CSS**. LuxeStore displays products from the Fake Store API and includes a functional shopping cart powered by React Context.
+A modern and responsive e-commerce web application built with **Next.js**, **TypeScript**, and **Tailwind CSS**. LuxeStore provides a seamless online shopping experience with dynamic product pages, product search, a shopping cart powered by React Context API, and a responsive design for both desktop and mobile devices.
 
 ## 🌐 Live Demo
 
-https://luxestore-sandy-seven.vercel.app
+https://luxestore-blue.vercel.app/
 
 ## 📂 GitHub Repository
 
@@ -14,25 +14,24 @@ https://github.com/mstechbaddie/luxestore
 
 ## ✨ Features
 
-- Responsive modern UI
-- Product listing from Fake Store API
-- Product categories
-- Shopping cart
-- Live cart counter
-- Optimized images with Next.js Image
-- Responsive design
-- TypeScript support
+- 🛒 Responsive e-commerce interface
+- 🔍 Product search functionality
+- 📦 Dynamic product details page
+- 🛍️ Shopping cart with React Context API
+- 📱 Fully responsive design
+- 🖼️ Optimized images using Next.js Image
+- ⚡ Fast performance with Next.js App Router
+- 🎨 Modern UI built with Tailwind CSS
 
 ---
 
-## 🛠️ Built With
+## 🛠️ Tech Stack
 
-- Next.js
-- React
+- Next.js 16
+- React 19
 - TypeScript
 - Tailwind CSS
 - React Context API
-- Fake Store API
 - Vercel
 
 ---
@@ -49,7 +48,7 @@ npm install
 npm run dev
 ```
 
-Open:
+Open your browser and visit:
 
 ```
 http://localhost:3000
@@ -59,7 +58,7 @@ http://localhost:3000
 
 ## 📸 Screenshot
 
-_Add a screenshot of the homepage here after uploading one._
+_Add a screenshot of the LuxeStore homepage here._
 
 ---
 
@@ -68,4 +67,5 @@ _Add a screenshot of the homepage here after uploading one._
 **Mary Seunfunmi Oyedeji**
 
 - GitHub: https://github.com/mstechbaddie
-- Portfolio: (Add your portfolio URL)
+- LinkedIn: https://www.linkedin.com/in/mary-oyedeji-2723772b9/
+- Portfolio: *Coming Soon*
