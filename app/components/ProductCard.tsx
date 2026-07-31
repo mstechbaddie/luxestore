@@ -24,8 +24,13 @@ export default function ProductCard({ product }: ProductCardProps) {
     <div className="flex-1">
 
       <div className="relative h-56">
-        ...
-      </div>
+  <Image
+    src={product.image}
+    alt={product.title}
+    fill
+    className="object-contain"
+  />
+</div>
 
       <h3 className="mt-6 h-16 font-semibold text-lg line-clamp-2">
         {product.title}

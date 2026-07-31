@@ -16,14 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <UIProvider>
-  <CartProvider>
-    <SearchProvider>
-      {children}
-    </SearchProvider>
-  </CartProvider>
-</UIProvider>
-      </body>
+  <UIProvider>
+    <CartProvider>
+      <SearchProvider>
+        {children}
+      </SearchProvider>
+    </CartProvider>
+  </UIProvider>
+</body>
     </html>
   );
 }
