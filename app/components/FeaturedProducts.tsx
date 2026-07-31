@@ -21,7 +21,7 @@ export default async function FeaturedProducts() {
           Number of products: {products.length}
         </p>
 
-        <ProductGrid products={products.slice(0, 8)} />
+        <ProductGrid products={products} />
       </div>
     </section>
   );
